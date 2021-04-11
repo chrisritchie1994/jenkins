@@ -20,15 +20,6 @@ services:
       - $PWD/aws-s3.sh:/tmp/script.sh
     networks:
       - net
-  web:
-    container_name: web
-    image: ansible-web
-    build:
-      context: jenkins-ansible/web
-    ports:
-      - "80:80"
-    networks:
-      - net
 
 networks:
   net:
